@@ -5,9 +5,7 @@ function add() {
         return fn
     }
     fn.toString = function () {
-        return _args.reduce(function (a, b) {
-            return a + b;
-        });
+        return _args.reduce((a, b) => a + b);
     }
     return fn
 }
