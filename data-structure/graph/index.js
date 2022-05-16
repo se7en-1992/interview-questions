@@ -23,7 +23,7 @@ const dfs = (n) => {
 // 广度优先遍历
 const visited1 = new Set()
 const dfs1 = (n) => {
-    visited1.add(n)
+  visited1.add(n)
   const q = [n]
   while(q.length){
     const n = q.shift()

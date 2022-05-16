@@ -9,7 +9,7 @@ function throttled(fn, delay) {
         let remaining = delay - (curTime - starttime);
         let context = this;
         let args = arguments;
-        if (remaining <=0 ) {
+        if (remaining <= 0 ) {
             fn.apply(context, args);
             starttime = Date.now();
         } else {

@@ -1,6 +1,6 @@
 1. 用户在浏览器中输入url发生了什么？
 
-2. V8引擎
+2. V8引擎了解多少
 
 3. CSS哪有操作会触发GPU
 
@@ -32,6 +32,8 @@ document.getElementsByTagName('body')[0].style.background = '#000'
 
 10. 小程序中的分包
 
-11. setTimeout第二个参数为0和不填有什么区别
+11. http\http1.0\http2.0之间的区别
+
+12. setTimeout第二个参数为0和不填有什么区别
 
 

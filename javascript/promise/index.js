@@ -130,7 +130,7 @@ _Promise.prototype.all = function(promises) {
     let resolvedValues = [];
     return new _Promise((resolve, reject) => {
         promises.forEach(promise => {
-            Promise.resolve(promise).then((value) => {
+            _Promise.resolve(promise).then((value) => {
                 resolveNum++;
                 resolveNum.push(value);
                 if (resolveNum === resolvedValues.length) {
