@@ -133,7 +133,7 @@ _Promise.prototype.all = function(promises) {
             _Promise.resolve(promise).then((value) => {
                 resolveNum++;
                 resolveNum.push(value);
-                if (resolveNum === resolvedValues.length) {
+                if (resolveNum === promises.length) {
                     return resolve(resolvedValues);
                 }
             }, (e) => {

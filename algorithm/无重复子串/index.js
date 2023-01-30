@@ -7,10 +7,10 @@ var lengthOfLongestSubstring = function(s) {
             set.add(s[i]);
             maxLength = Math.max(maxLength, set.size)
         } else {
-            while(set.has(s[i])) {{
+            while(set.has(s[i])) {
                 set.delete(s[j])
                 j++
-            }}
+            }
             set.add(s[i])
         }
     }

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /*以下flex实现，也可以用grid实现*/
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+    }
+
+    .cube {
+      width: 200px;
+      height: 200px;
+      margin: 200px auto;
+      transform-style: preserve-3d;
+      transform: rotateX(45deg) rotateZ(45deg);
+      animation: rotate 5s infinite linear;
+    }
+
+    .cube:hover {
+      animation-play-state: paused;
+    }
+
+    @keyframes rotate {
+      from {
+        transform: rotateX(0) rotateZ(0);
+      }
+
+      to {
+        transform: rotateX(360deg) rotateZ(360deg);
+      }
+    }
+
+    .box {
+      width: 200px;
+      height: 200px;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+      background-color: #fff;
+      display: flex;
+      opacity: 0.9;
+      position: absolute;
+    }
+
+    .item {
+      width: 0;
+      height: 0;
+      border: 20px solid transparent;
+      border-radius: 20px;
+      border-color: #000;
+      /* border-top-color: green;
+      border-bottom-color: red;
+      border-left-color: blue;
+      border-right-color: pink; */
+      transform: rotateZ(45deg);
+    }
+
+    .box1 {
+      justify-content: center;
+      align-items: center;
+      transform: rotateY(90deg) translateZ(100px);
+    }
+
+    .box2 {
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      transform: rotateY(-90deg) translateZ(100px);
+    }
+
+    .box3 {
+      justify-content: space-between;
+      transform: rotateX(90deg) translateZ(100px);
+    }
+
+    .box3 .item:nth-child(2) {
+      align-self: center;
+    }
+
+    .box3 .item:nth-child(3) {
+      align-self: flex-end;
+    }
+
+    .box4 {
+      justify-content: space-evenly;
+      flex-direction: column;
+      transform: rotateX(-90deg) translateZ(100px);
+    }
+
+    .box4 div {
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    .box5 {
+      flex-direction: column;
+      justify-content: space-evenly;
+      transform: rotateY(180deg) translateZ(100px);
+    }
+
+    .box5 div {
+      display: flex;
+      justify-content: space-evenly;
+    }
+
+    .box6 {
+      flex-direction: column;
+      justify-content: space-evenly;
+      transform: rotateY(0deg) translateZ(100px);
+    }
+
+    .box6 div {
+      display: flex;
+      justify-content: space-evenly;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="cube">
+    <div class="box box1">
+      <span class="item"></span>
+    </div>
+    <div class="box box2">
+      <span class="item"></span>
+      <span class="item"></span>
+    </div>
+    <div class="box box3">
+      <span class="item"></span>
+      <span class="item"></span>
+      <span class="item"></span>
+    </div>
+    <div class="box box4">
+      <div>
+        <span class="item"></span>
+        <span class="item"></span>
+      </div>
+      <div>
+        <span class="item"></span>
+        <span class="item"></span>
+      </div>
+    </div>
+    <div class="box box5">
+      <div>
+        <span class="item"></span>
+        <span class="item"></span>
+      </div>
+      <div>
+        <span class="item"></span>
+      </div>
+      <div>
+        <span class="item"></span>
+        <span class="item"></span>
+      </div>
+    </div>
+    <div class="box box6">
+      <div>
+        <span class="item"></span>
+        <span class="item"></span>
+      </div>
+      <div>
+        <span class="item"></span>
+        <span class="item"></span>
+      </div>
+      <div>
+        <span class="item"></span>
+        <span class="item"></span>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -42,3 +42,15 @@ function debounce(func, wait, immediate) {
          }
      }
 }
+
+// 简易防抖
+const debounce = (fn, timeout) => {
+    let timer = 0;
+    return (...args) => {
+        clearTimeout(timer);
+        timer = setTimeout(() => {
+          fn(...args);
+          timer = 0;
+        }, timeout);
+    };
+  };

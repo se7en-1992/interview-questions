@@ -17,4 +17,5 @@
 - display的值为inline-block、inltable-cell、table-caption、table、inline-table、flex、inline-flex、grid、inline-grid
 - position的值为absolute或fixed
 
-# 浏览器渲染阶段
+# 实现一个骰子
+- 详见`index.html`

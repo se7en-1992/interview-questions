@@ -1,5 +1,6 @@
 var arr = [1, 5, 3, 2];
 
+// 快排
 function quickSort(arr) {
     const sort = (arr) => {
         if (arr.length <= 1) return arr
@@ -19,4 +20,4 @@ function quickSort(arr) {
     return sort(arr)
 }
 
-console.log(quickSort(arr))
+console.log(quickSort(arr));

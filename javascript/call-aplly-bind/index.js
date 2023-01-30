@@ -33,6 +33,18 @@ Function.prototype.myBind = function(context, ...args) {
     }
 }
 
+
+Function.prototype.mybind = function () {
+    const context = [...arguments].slice(0, 1);
+    const args = [...arguments].slice(1);
+    const fn = this;
+
+    return function Fn () {
+        const result = this instanceof Fn ? new fn(...arguments) : context;
+        return fn.apply(result, args.concat(...arguments));
+    }
+}
+
 var obj = {
     name: '123',
     say() {
@@ -40,6 +52,6 @@ var obj = {
     }
 }
 
-// var obj1 = { name: '57' }
+var obj1 = { name: '57' };
 
-// obj.say.myCall(obj1)
+obj.say.myCall(obj1);
